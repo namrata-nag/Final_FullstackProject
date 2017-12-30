@@ -1,0 +1,39 @@
+<div class="container">
+    <h1>Edit Book</h1>
+    <form #formRef="ngForm" (ngSubmit)="onSubmit(formRef.value)">
+        <div class="form-group">
+      <label for="Title">Title</label>
+      <input type="text" class="form-control" id="Title" name="Title" [(ngModel)]="book.Title" >
+    </div>
+    <div class="form-group">
+      <label for="Author">Author</label>
+      <input type="text" class="form-control" id="Author" name="Author" [(ngModel)]="book.Author" >
+     </div>
+    <div class="form-group">
+      <label for="ISBN">ISBN</label>
+      <input type="number" class="form-control" id="ISBN" name="ISBN" [(ngModel)]="book.ISBN" >
+    </div>
+    <div class="form-group">
+      <label for="Publishing_Date">Publisher_Date</label>
+      <input type="date" class="form-control" id="Publishing_Date" name="Publishing_Date" [(ngModel)]="book.Publishing_Date"  >
+    </div>
+    <div class="form-group">
+      <label for="Publisher">Publisher</label>
+      <input type="text" class="form-control" id="Publisher" name="Publisher" [(ngModel)]="book.Publisher"  >
+    </div>
+    <div class="form-group">
+      <label for="Genre">Genre</label>
+      <input type="text" class="form-control" id="Genre" name="Genre" [(ngModel)]="book.Genre"  >
+    </div>
+    <div class="form-group">
+      <label for="Format">Format</label>
+      <input type="text" class="form-control" id="Format" name="Format" [(ngModel)]="book.Format"  >
+    </div>
+    <div class="form-group">
+      <label for="Price">Price</label>
+      <input type="number" class="form-control" id="Price" name="Price" [(ngModel)]="book.Price"  >
+    </div>
+    <button type="submit" class="btn btn-lg- btn-info">Submit</button>
+    </form>
+
+</div>

@@ -1,0 +1,50 @@
+
+<div class="container"> 
+    
+<form class="form-inline">
+  <div class="form-row ">
+   
+      <div class="form-group ">
+         <label class="form-control" for="search_icon"><span class="glyphicon glyphicon-search "></span></label>
+         <input type="text" [(ngModel)]='search' name="name" class="form-control col-sm-11" id="search_icon" placeholder="Search by Book Title" />
+         <select [(ngModel)]="searchBy"  class="form-control" name="Search By:">
+             <option value="" >Search By:</option>
+             <option value="Author">Author</option>
+             <option value="Genre">Genre</option> 
+
+         </select>
+
+     </div>
+     
+  </div>
+</form>
+</div>
+<div class='container'>
+    <table class="table table-dark" >
+        <thead>
+            <tr>
+                <th>BOOK NAME</th>
+                <th>AUTHOR</th>
+                <th>GENRE</th>
+                <th>PRICE</th>
+                <th></th>
+                <th></th>
+                
+              
+            </tr>
+        </thead>
+        <tbody ><tr><td></td></tr>
+            <tr *ngFor='let b of books | bookFilter:search:searchBy '>
+                    <td><a  [routerLink]="['/detail',b.ISBN]" id="nam" >{{ b.Title | uppercase }}</a></td>
+                    <td>{{ b.Author }}</td>
+                    <td>{{ b.Genre }}</td>
+                    <td>{{ b.Price }}</td>
+                    <td><a [routerLink]="['/updateBook',b.ISBN]" class="btn btn-md btn-primary blc">Edit</a></td>
+                    <td><a  (click)="deleteBook(b.ISBN)" class="btn btn-md btn-danger ">Delete</a></td>
+                   
+                </tr>
+        </tbody>
+    </table>
+    <a routerLink="addBook" class="btn btn-warning btn-lg " id="add">Add Books</a>
+   
+</div>

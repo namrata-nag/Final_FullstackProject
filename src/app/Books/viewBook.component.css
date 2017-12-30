@@ -1,0 +1,37 @@
+.form-control{
+    margin: 10px;
+    
+}
+.container{
+    color:#000000;
+  
+   
+}
+a#nam{
+   color:#000000;
+   font-weight:bold;
+}
+thead{
+    color:#ef762f;
+    font-size: 20px;
+}
+tbody{
+    font-size:18px;
+}
+#add{
+   
+    margin-left:45%;
+    margin-right:50% ;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background:#ef762f;
+    
+    
+}
+label{
+   float:left;
+}
+.btn{
+    font-size: 15px;
+}
+

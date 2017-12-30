@@ -1,0 +1,48 @@
+<div class="container">
+   <h1>ADD NEW BOOKS</h1> 
+   <form #formValue="ngForm" (ngSubmit)="onSubmit(formValue.value)">
+        <div class="form-group row">
+    <label for="title" class="col-sm-2 col-form-label">Title :</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" id="title" placeholder="Name of the Book" name="title" [(ngModel)]="Title" >
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="author" class="col-sm-2 col-form-label">Author:</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" id="author" name="author" [(ngModel)]="Author"placeholder="Name of the Author">
+    </div>
+  </div>
+      <div class="form-group row">
+    <label for="date" class="col-sm-2 col-form-label">Publication Date :</label>
+    <div class="col-sm-10">
+      <input type="date" class="form-control" id="date"  name="date" [(ngModel)]="Date">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="publisher" class="col-sm-2 col-form-label">Publisher:</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" id="publisher" name="publisher" [(ngModel)]="Publisher"placeholder="Publisher Name">
+    </div>
+  </div>
+      <div class="form-group row">
+    <label for="price" class="col-sm-2 col-form-label">Price :</label>
+    <div class="col-sm-10">
+      <input type="number" class="form-control" id="price"  name="price" [(ngModel)]="Price">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="genre" class="col-sm-2 col-form-label">Genre:</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" id="genre" name="genre" [(ngModel)]="Genre">
+    </div>
+  </div>
+   <div class="form-group row">
+    <label for="format" class="col-sm-2 col-form-label">Format:</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" id="format" name="format" [(ngModel)]="Format">
+    </div>
+  </div>
+   <button type="submit" class="btn btn-info" >Submit</button>
+   </form>
+</div>
