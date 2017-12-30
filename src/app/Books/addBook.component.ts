@@ -8,6 +8,14 @@ import {Router,ActivatedRoute} from '@angular/router';
     templateUrl:'./addBook.component.html',
 })
 export class AddBook{
+    Title:string;
+    Author:string;
+    Date:number;
+    Publisher:string;
+    Price:number;
+    Genre:string;
+     Format:string; 
+
 
     constructor(private add:BookService,private router: Router){}
     onSubmit(value:any){

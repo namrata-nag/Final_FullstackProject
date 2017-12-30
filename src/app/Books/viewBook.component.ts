@@ -10,6 +10,8 @@ import { Component,OnInit } from '@angular/core';
 export class ViewBook implements OnInit{
   
     books:any[];
+    search:string;
+    searchBy:string;
 
 constructor(private bookservice:BookService){}
     
